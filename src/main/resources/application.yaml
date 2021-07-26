@@ -1,0 +1,21 @@
+spring:
+  profiles: dev
+  servlet:
+    multipart:
+      max-file-size: 5000KB
+      max-request-size: 5000KB
+
+logging:
+  level:
+    org.webeid.security: DEBUG
+    org.webeid.example: DEBUG
+
+web-eid-auth-token:
+  validation:
+    use-digidoc4j-prod-configuration: false
+    local-origin: "https://webeidspringexamplemodified.herokuapp.com"
+    fingerprint: "82:6F:E8:01:13:78:A9:2A:76:2B:B6:9F:2F:8C:EB:11:D2:4E:2E:4D:9F:66:FA:71:E8:C7:88:55:FB:C2:BB:AB"
+#    local-origin: "https://8610dffc8248.ngrok.io"
+#    fingerprint: "9C:06:50:B8:46:6A:C6:6A:70:43:04:EB:71:DC:0F:10:F6:32:BA:99:26:E1:0E:DE:B8:14:9F:5F:DB:5C:75:DA"
+    keystore-password: "changeit"
+#    keystore-password: "digidoc4j-password" #new keystore pw
